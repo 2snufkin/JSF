@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+body{
+    background: url("woman.jpg") no-repeat center   fixed       ;
+    font-family: 'Gloria Hallelujah', cursive;
+    background-size: cover;
+
+
+}
+#button{
+    padding-top: 25px;
+}
+h1{
+    color: black;
+    margin-left: 300px;
+    margin-top: 50px;
+    font-size: 3em;
+
+}
+span{
+    padding-bottom: 20px;
+}
+button.ui-button {
+    margin-right: .5rem;
+}
+.ui-fluid{
+    width: 200px;
+}
+#form{
+    margin-left: 300px;
+    margin-top: 100px;
+}

@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <link type="text/css" rel="stylesheet" href="styles.css" /></h:head>
+
+<h:body>
+    <h1>Sign in</h1>
+    <h:form id="form">
+
+    <span class="ui-float-label">
+       <p:inputText id="login" value="#{loginBean.login}"/>
+       <p:outputLabel for="@previous" value="login"/>
+   </span>
+
+    <span class="ui-float-label">
+       <p:inputText id="password" value="#{loginBean.password}"/>
+       <p:outputLabel for="@previous" value="password"/>
+   </span>
+       <span class="ui-float-label">
+       <p:inputText id="name" value="#{loginBean.employe.prenom}"/>
+       <p:outputLabel for="@previous" value="name"/>
+   </span>
+       <span class="ui-float-label">
+       <p:inputText id="lastName" value="#{loginBean.employe.nom}"/>
+       <p:outputLabel for="@previous" value="lastName"/>
+   </span>
+
+        <p:growl id="msg"/>
+
+
+        <p:selectBooleanCheckbox value="#{loginBean.employe.isActive}" itemLabel="actif"/>
+
+
+
+        <div class="ui-fluid p-formgrid p-grid">
+        <div class="p-field p-col-12 p-md-4">
+            <p:outputLabel for="@next" value="Role"/>
+            <p:selectOneMenu id="option" value="#{selectOneMenuView.selectedOption}">
+                <f:selectItem itemLabel="Admin" itemValue="ADMIN"/>
+                <f:selectItem itemLabel="Ingenieur" itemValue="INGENIEUR"/>
+                <f:selectItem itemLabel="Departement Chef" itemValue="CHEF_DEPARTMENT"/>
+
+                <f:facet name="footer">
+                    <p:divider styleClass="p-mt-0" />
+                    <h:outputText value="3 options" style="font-weight:bold;"/>
+                </f:facet>
+
+            </p:selectOneMenu>
+        </div>
+        </div>
+        <div id="button">
+        <p:commandButton type="button" value="Submit" style="fill: black"/>
+        </div>
+      </h:form>
+</h:body>
+</html>
